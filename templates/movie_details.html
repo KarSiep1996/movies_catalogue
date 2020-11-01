@@ -18,10 +18,20 @@
            {{ movie.overview}}
        </p>
        <dl>
-           <dt>Budget</dt>
-           <dd>{{ movie.budget }}</dd>
-           <dt>Genre</dt>
-           <dd>{% for genre in movie.genres %}{{ genre.name }}, {% endfor %}</dd>
+            {% if movie.budget == 0 %}
+                <dt>Budget</dt>
+                <dd>-------------</dd>
+            {% else %}
+                <dt>Budget</dt>
+                <dd>{{ movie.budget }}</dd>
+            {% endif %}
+            {% if movie.genres == [] %}
+                <dt>Genre</dt>
+                <dd>-------------</dd>
+            {% else %}
+                <dt>Genre</dt>
+                <dd>{% for genre in movie.genres %}{{ genre.name }}, {% endfor %}</dd>
+            {% endif %}
          </dl>
      </div>
    </div>
