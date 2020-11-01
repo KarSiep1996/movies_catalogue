@@ -1,0 +1,37 @@
+.mt-5 {
+    color:rgb(29, 101, 173);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.lead {
+    color:rgb(14, 185, 190);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h4 {
+    color:rgb(14, 185, 190);
+    font-weight: bold;
+}
+a.movie {
+    color: black;
+    font-weight: bold;
+}
+a.default, a.current {
+    color: rgb(13, 127, 131);
+    font-weight: bold;
+    display: inline-block;
+    background: none;
+    border-style:solid;
+    border-width:thin;
+    border-radius: 5px;
+    border-color:rgb(13, 127, 131) ;
+    padding: 0.5em 0.75em;
+    text-decoration-line: none;
+}
+a.current {
+    color: white;
+    background: rgb(14, 185, 190);
+}
+a.default:hover {
+    background: rgb(165, 234, 236);
+}
