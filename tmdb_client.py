@@ -1,5 +1,6 @@
 import requests
-API_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzOTY3ZDJjYTA5OWU0MjI1Yjg5MTcyOGFhYmY5NDRlZSIsInN1YiI6IjVmOTJmODEyYzFmZmJkMDAzN2E1ZTdiNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bL-8CnSflZX5QG6cbQq85dEkCfI66xdtfjbNCVGt7z4"
+import os
+API_TOKEN = os.environ.get("TMDB_API_TOKEN", "")
 
 lists = ['popular', 'now_playing', 'top_rated', 'upcoming']
 
