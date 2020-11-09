@@ -6,6 +6,7 @@ from main import app
 sys.path.insert(0, 'C:\\Users\\User\\Desktop\\Projekty\\movies_project\\movies_catalogue') 
 import tmdb_client
 from tmdb_client import API_TOKEN
+STATUS_CODE_OK = 200
 
 def test_get_poster_url_uses_default_size():
    poster_api_path = "some-poster-path"
@@ -59,10 +60,10 @@ def test_homepage(monkeypatch, list_type):
    monkeypatch.setattr("tmdb_client.call_tmdb_api", api_mock)
    with app.test_client() as client:
       response = client.get('/')
-      assert response.status_code == 200
+      assert response.status_code == STATUS_CODE_OK
       api_mock.assert_called_once_with('movie/popular') 
       response = client.get(f'/?list_type={list_type}')
-      assert response.status_code == 200
+      assert response.status_code == STATUS_CODE_OK
       api_mock.assert_called_with(f'movie/{list_type}')
 
 
