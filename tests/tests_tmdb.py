@@ -44,7 +44,7 @@ def test_get_single_movie_cast_check_api_endpoint():
       "Authorization": f"Bearer {API_TOKEN}"
    }
    response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}/credits", headers=headers)
-   assert response.status_code == 200
+   assert response.status_code == STATUS_CODE_OK
 
 def test_get_single_movie_check_api_endpoint():
    movie_id = 20
@@ -52,7 +52,7 @@ def test_get_single_movie_check_api_endpoint():
       "Authorization": f"Bearer {API_TOKEN}"
    }
    response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}", headers=headers)
-   assert response.status_code == 200
+   assert response.status_code == STATUS_CODE_OK
 
 @pytest.mark.parametrize('list_type',[('popular'),('top_rated'),('upcoming'),('now_playing')])
 def test_homepage(monkeypatch, list_type):
