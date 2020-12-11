@@ -31,5 +31,14 @@ def movie_details(movie_id):
    cast = tmdb_client.get_single_movie_cast(movie_id)
    return render_template("movie_details.html", movie=details, cast=cast)
 
+@app.route('/search')
+def search():
+    search_query = request.args.get("q", "")
+    if search_query:
+        movies = tmdb_client.search(search_query=search_query)
+    else:
+        movies = []
+    return render_template("search.html", movies=movies, search_query=search_query)
+
 if __name__ == '__main__':
     app.run(debug=True)
