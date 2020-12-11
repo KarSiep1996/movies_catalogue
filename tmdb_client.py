@@ -31,6 +31,17 @@ def get_single_movie_cast(movie_id):
     response = call_tmdb_api(f"movie/{movie_id}/credits")
     return response["cast"]
 
+def search(search_query):
+   base_url = "https://api.themoviedb.org/3/"
+   headers = {
+       "Authorization": f"Bearer {API_TOKEN}"
+   }
+   endpoint = f"{base_url}search/movie/?query={search_query}"
+
+   response = requests.get(endpoint, headers=headers)
+   response = response.json()
+   return response['results']
+
 
 
 
