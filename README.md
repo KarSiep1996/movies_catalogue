@@ -21,7 +21,7 @@ Web application created to find information about movies stored in The Movie Dat
 ## Structure
 
 | Endpoint          | HTTP method        | Result                                         |
-| ----------------  | :----------------: | ----------------------------------------------:|
+| ----------------  | :----------------: | :---------------------------------------------:| 
 | /                 | GET                | Get 8 movies of chosen category                |
 | /movie/<movie_id> | GET                | Get details of movie with certain id           |
 | /search           | GET                | Get list of movies that match the search       |
