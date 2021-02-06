@@ -1,9 +1,3 @@
-# movies_catalogue
-Web application created to find information about movies stored in The Movie Database API (TNDb).
-Following technologies have been used while working on this project: Python, Flask, HTML, CSS, Bootstrap.
-All packages that need to be installed to run it on your computer are mentioned in requirements.txt.
-It was deployed using Heroku (link to heroku app: https://my-movies-library.herokuapp.com/)
-
 # Movies catalogue
 >Web application created to find information about movies stored in The Movie Database API (TNDb).
 
@@ -26,9 +20,19 @@ Web application created to find information about movies stored in The Movie Dat
 
 ## Structure
 
-| Endpoint         | HTTP method        | Result          |
-| ---------------- | :----------------: | ----------------:|
+| Endpoint          | HTTP method        | Result           |
+| ----------------  | :----------------: | ----------------:|
+| /                 | GET                | Result           |
+| /movie/<movie_id> | GET                | Result           |
+| /search           | GET                | Result           |
+| /today            | GET                | Result           |
+| /favorites        | GET                | Result           |
+| /favorites/add    | POST               | Result           |
+
 
 ## Status
+Project is: _in progress_
 
 ## Contact
+Feel free to contact me :)
+E-mail: karsiep1996@gmail.com
