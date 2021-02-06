@@ -20,14 +20,14 @@ Web application created to find information about movies stored in The Movie Dat
 
 ## Structure
 
-| Endpoint          | HTTP method        | Result           |
-| ----------------  | :----------------: | ----------------:|
-| /                 | GET                | Result           |
-| /movie/<movie_id> | GET                | Result           |
-| /search           | GET                | Result           |
-| /today            | GET                | Result           |
-| /favorites        | GET                | Result           |
-| /favorites/add    | POST               | Result           |
+| Endpoint          | HTTP method        | Result                                         |
+| ----------------  | :----------------: | ----------------------------------------------:|
+| /                 | GET                | Get 8 movies of chosen category                |
+| /movie/<movie_id> | GET                | Get details of movie with certain id           |
+| /search           | GET                | Get list of movies that match the search       |
+| /today            | GET                | Get list of movies that are on TV today        |
+| /favorites        | GET                | Get list of movies that were add to favourites |
+| /favorites/add    | POST               | Add certain position to favourites             |
 
 
 ## Status
